@@ -114,7 +114,7 @@ bool ListCheckInsert_Sq(SqList L, ElemType e)
    CanInsert_Sq(L);
    int i = 0;
    for ( ; i < L.length - 1 && L.elem[i] <= e; i++);
-   for (j = L.) 
+   
 
 }
 
