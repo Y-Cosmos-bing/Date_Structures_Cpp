@@ -37,6 +37,7 @@ public:
         merge(arr, L, M, R);
     }
 
+private:
     void merge(int* arr, int L, int M, int R)
     {
         int size = R - L + 1;
@@ -66,6 +67,7 @@ public:
         delete(help);
     }
 
+public:
     // 递归版本的小和问题的merge解法
         int minSum_MergeSort(int* arr, int L, int R)  // 实现在某一个无序数组的一个区间上变为有序
     {
@@ -73,6 +75,7 @@ public:
         return minSum_Merge(arr, L, M, R) + minSum_MergeSort(arr, L, M) + minSum_MergeSort(arr, M + 1, R);
     }
 
+private:
     int minSum_Merge(int* arr, int L, int M, int R)
     {
         int s = 0;
@@ -102,6 +105,6 @@ public:
         {
             arr[L + i] = help[i];
         }
-        delete(help);
+        delete help;
     }
 };
